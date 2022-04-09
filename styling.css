@@ -1,0 +1,61 @@
+#leftpanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: lightgrey;
+  border:solid 1px lightblue;
+  width: 160px;
+  height: 1000px;
+  padding-left: 8px;
+  margin: 0px;
+}
+
+#leftpanel-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 160px;
+  height: 170px;
+}
+
+#titlepanel {
+  position: absolute;
+  top: 120px;
+  left: 230px;
+  width: 1300px;
+}
+
+#contentpanel {
+  position: absolute;
+  top: 250px;
+  left: 250px;
+  width: 1250px;
+}
+
+#toc {
+  position: absolute;
+  top: 450px;
+  left: 300px;
+  background: lightgrey;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#toclist {
+  margin-right: 20px;
+}
+
+ol {
+  counter-reset: item;
+}
+
+li {
+  display: block;
+}
+
+li:before {
+  content: counters(item, ".") " ";
+  counter-increment: item;
+}
